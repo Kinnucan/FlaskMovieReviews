@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        <div>
+            <table id="review_table">
+                {% for r in reviews %}
+                    <tr>
+                        <th><a href="displayreview/{{ r.id }}">{{ r.title }}</a></th>
+                        <th>
+                            {% for n in range(r.rating) %}
+                                <div class="star_ratings">
+                                    <img class="stars" src="{{ url_for('static', filename='images/star.png') }}">
+                                </div>
+                            {% endfor %}
+                        </th>
+                        <th><a href="/editreview/{{ r.id }}">Edit</a></th>
+                        <th><a href="/deletereview/{{ r.id }}">Delete</a></th>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endblock %}

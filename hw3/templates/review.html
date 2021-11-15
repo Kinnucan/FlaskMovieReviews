@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+    <div>
+        <h2>Review Page</h2>
+        <form action="/submitreview" method="POST">
+            <div class="form-sections" style="display:none">
+                {% if review %}
+                    <input type="number" name="review_id" value="{{ review.id }}">
+                {% endif %}
+            </div>
+            <div class="form-sections">
+                <label>Title</label>
+                {% if review %}
+                    <input type="text" name="title" value="{{ review.title }}">
+                {% else %}
+                    <input type="text" name="title">
+                {% endif %}
+            </div>
+            <div class="form-sections">
+                <label>Review</label>
+                {% if review %}
+                    <input type="text" name="review_text" value="{{ review.text }}">
+                {% else %}
+                    <input type="text" name="review_text">
+                {% endif %}
+            </div>
+            <div class="form-sections">
+                <label>Rating</label>
+                {% if review %}
+                    <input type="number" name="rating" min="1" max="5" value="{{ review.rating }}">
+                {% else %}
+                    <input type="number" name="rating" min="1" max="5">
+                {% endif %}
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+    {% endblock %}
+    

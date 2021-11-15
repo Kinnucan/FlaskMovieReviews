@@ -1,0 +1,27 @@
+.star_ratings {
+    display: inline-block;
+}
+
+.stars {
+    height: 20px;
+    width: 20px;
+    margin-bottom: -4px;
+}
+
+#review_table {
+    margin-top: 1%;
+    border: solid;
+    border-color: black;
+}
+
+#rating_header {
+    display: inline-block;
+}
+
+#review_header {
+    margin-bottom: 0px;
+}
+
+#review_text {
+    margin-top: 0.5%;
+}

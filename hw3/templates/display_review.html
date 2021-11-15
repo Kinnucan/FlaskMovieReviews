@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    
+    {% block content %}
+        <div>
+            <h3>Title: {{ review.title }}</h3>
+            <h4 id="review_header">Review:</h4>
+            <p id="review_text">{{ review.text }}</p>
+            <div>
+                <h4 id="rating_header">Rating:</h4>
+                {% for n in range(review.rating) %}
+                    <div class="star_ratings">
+                        <img class="stars" src="{{ url_for('static', filename='images/star.png') }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
