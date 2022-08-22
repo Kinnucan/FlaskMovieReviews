@@ -1,4 +1,4 @@
-Comp 446: HW3
+FlaskMovieReviews
 ====
 
-Instructions are [here](https://docs.google.com/document/d/1o2QIHHCon3xKpbKhiq1TUwGKzW7AAg_rt2qP__TLNwM/edit#heading=h.l8rvg9w51atr).
+Simple school project creating a Flask database to store, edit, and delete movie reviews created by a user.
